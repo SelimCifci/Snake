@@ -79,12 +79,15 @@ class Apple:
 
 
 def main():
+    pygame.init()
+    pygame.mouse.set_visible(False)
+
     background_color = (20, 46, 16)
     width, height = 480, 480
 
     clock = pygame.time.Clock()
 
-    screen = pygame.display.set_mode((width, height))
+    screen = pygame.display.set_mode((width, height), pygame.SCALED)
     pygame.display.set_caption("Snake")
 
     block_pixels = 30
